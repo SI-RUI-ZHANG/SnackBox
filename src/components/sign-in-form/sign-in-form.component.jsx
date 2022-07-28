@@ -4,7 +4,6 @@ import FormInput from '../form-input/form-input.component'
 import Button from "../button/button.component";
 
 import {
-  createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
   signInWithGooglePopup
 } from "../../utils/firebase/firebase.utils";
@@ -32,7 +31,7 @@ const SignInForm = () => {
     event.preventDefault()
 
     try {
-      const {user} = await signInAuthUserWithEmailAndPassword(
+      await signInAuthUserWithEmailAndPassword(
         email,
         password
       )
@@ -58,7 +57,7 @@ const SignInForm = () => {
   }
 
   return (
-    <div className={'sign-up-container'}>
+    <div className={'sign-in-container'}>
       <h2>Already have an account</h2>
       <span>Sign in with your email and password</span>
       <form onSubmit={handleSubmit}>

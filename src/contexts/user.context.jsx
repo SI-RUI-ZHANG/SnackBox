@@ -18,6 +18,8 @@ export const UserProvider = ({children}) => {
       if (user) {
         createUserDocumentFromAuth(user);
       }
+      // this state change will cause react to rerender this component
+      // therefore rerender its child component
       setCurrentUser(user)
     })
   }, [])
