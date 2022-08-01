@@ -47,7 +47,6 @@ const SignInForm = () => {
         default:
           console.log(error)
       }
-      console.log(error)
     }
   }
 

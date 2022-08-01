@@ -14,8 +14,7 @@ import {
   doc,
   getDoc,
   setDoc,
-}
-  from 'firebase/firestore'
+} from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: "AIzaSyC1akje7yPph7EfdQCMmvO4wj6ORazPfU4",
