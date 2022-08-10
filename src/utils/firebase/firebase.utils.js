@@ -55,7 +55,6 @@ export const getCategoriesAndDocuments = async () => {
 
   const querySnapshot = await getDocs(q)
   return querySnapshot.docs.map(docSnapshot => docSnapshot.data())
-
 }
 
 export const createUserDocumentFromAuth = async (
