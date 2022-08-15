@@ -103,14 +103,11 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
 export const signOutUser = async () => await signOut(auth)
 
 export const getCurrentUser = () => {
-  return new Promise((resolve, reject) => {
-    const unsubscribe = onAuthStateChanged(
-      auth,
-      (userAuth) => {
+  return new Promise((resolve) => {
+    const unsubscribe = onAuthStateChanged(auth, (userAuth) => {
         unsubscribe()
         resolve(userAuth)
-      },
-      reject
+      }
     )
   })
 }

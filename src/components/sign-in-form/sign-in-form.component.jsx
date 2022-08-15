@@ -12,9 +12,9 @@ const defaultFormFields = {
 }
 
 const SignInForm = () => {
-  const dispatch = useDispatch()
   const [formFields, setFormFields] = useState(defaultFormFields)
   const {email, password} = formFields
+  const dispatch = useDispatch()
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields)

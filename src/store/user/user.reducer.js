@@ -2,7 +2,6 @@ import {USER_ACTION_TYPES} from "./user.types";
 
 const INITIAL_STATE = {
   currentUser: null,
-  isLoading: false,
   error: null
 }
 
