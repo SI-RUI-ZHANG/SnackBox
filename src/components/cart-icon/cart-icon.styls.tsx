@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const CartIconContainer = styled.div`
+  border: 2px solid #ff6666;
+  border-radius: .5rem;
   width: 45px;
   height: 45px;
   position: relative;
@@ -8,10 +10,14 @@ export const CartIconContainer = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  
+
   svg {
     width: 24px;
     height: 24px;
+  }
+
+  :hover {
+    background-color: #ff6666;
   }
 `;
 

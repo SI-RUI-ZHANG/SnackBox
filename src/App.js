@@ -4,8 +4,6 @@ import {useDispatch} from "react-redux";
 import {Routes, Route} from "react-router-dom";
 import {checkUserSession} from "./store/user/user.action";
 import Spinner from "./components/spinner/spinner.component";
-import {addCollectionAndDocuments} from "./utils/firebase/firebase.utils";
-import SHOP_DATA from "./shop-data";
 
 const Checkout = lazy(() => import('./routes/checkout/checkout.component'))
 const Shop = lazy(() => import('./routes/shop/shop.component'))
@@ -19,10 +17,6 @@ const App = () => {
   useEffect(() => {
     dispatch(checkUserSession())
   }, [])
-
-  // useEffect(() => {
-  //   addCollectionAndDocuments('categories', SHOP_DATA)
-  // }, [])
 
   return (
       <Suspense fallback={<Spinner/>}>

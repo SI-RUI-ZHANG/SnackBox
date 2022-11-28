@@ -12,7 +12,7 @@ export const ProductCardContainer = styled.div`
   img {
     width: 100%;
     height: 95%;
-    object-fit: cover;
+    object-fit: contain;
     margin-bottom: 5px;
   }
 
@@ -42,13 +42,15 @@ export const Name = styled.span`
 `
 
 export const Price = styled.span`
-  width: 10%;
+  width: 100%;
 `
 
 export const Footer = styled.div`
+  margin: auto;
+  text-align: center;
   width: 100%;
   height: 5%;
-  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 15px;
 `

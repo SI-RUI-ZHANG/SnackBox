@@ -2,6 +2,8 @@ import styled from "styled-components";
 import {Link} from "react-router-dom";
 
 export const NavigationContainer = styled.div`
+  padding: 1rem;
+  border-bottom: 6px double #ff6666;
   height: 70px;
   width: 100%;
   display: flex;
@@ -10,15 +12,16 @@ export const NavigationContainer = styled.div`
 `
 
 export const LogoContainer = styled(Link)`
-  .logo-container {
-    height: 100%;
-    width: 70px;
-    padding: 25px;
-  }
+  margin-right: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: initial;
+  justify-items: initial;
 `
 
 export const NavLinks = styled.div`
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -26,7 +29,17 @@ export const NavLinks = styled.div`
 `
 
 export const NavLink = styled(Link)`
+  font-weight: bold;
+  color: #ff6666;
+  margin-right: .5rem;
   padding: 10px 15px;
   cursor: pointer;
+  border: 2px solid #ff6666;
+  border-radius: .5rem;
+
+  :hover {
+    background-color: #ff6666;
+    color: white;
+  }
 `
 

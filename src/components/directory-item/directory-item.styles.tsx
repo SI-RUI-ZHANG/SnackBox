@@ -7,7 +7,8 @@ type BackgroundImageProps = {
 export const BackgroundImage = styled.div<BackgroundImageProps>`
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   background-image: ${({imageUrl}) => `url(${imageUrl})`};
 `
@@ -19,33 +20,34 @@ export const Body = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border-radius: 1rem;
   background-color: white;
-  opacity: 0.7;
+  opacity: 0.9;
   position: absolute;
 
   h2 {
     font-weight: bold;
     margin: 0 6px 0;
     font-size: 22px;
-    color: #4a4a4a;
+    color: #3a3939;
     text-transform: uppercase;
   }
 
   p {
-    font-weight: lighter;
+    font-weight: normal;
     font-size: 16px;
   }
 `
 
 export const DirectoryItemContainer = styled.div`
   min-width: 30%;
-  height: 240px;
+  height: 250px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border: 4px dotted #ff6666;
+  border-radius: 1rem;
   margin: 0 7.5px 15px;
   overflow: hidden;
 

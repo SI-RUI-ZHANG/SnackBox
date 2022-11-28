@@ -8,7 +8,7 @@ import {selectCurrentUser} from "../../store/user/user.selector";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 
-import {ReactComponent as CrownLogo} from "../../assets/crown.svg";
+import {ReactComponent as SnackBox} from "../../assets/SnackBox.svg";
 
 import {
   NavigationContainer,
@@ -28,14 +28,14 @@ const Navigation = () => {
   return (
     <Fragment>
       <NavigationContainer>
-        <LogoContainer to={'/'}><CrownLogo className={'logo'}/></LogoContainer>
 
         <NavLinks>
+          <LogoContainer to={'/'}><SnackBox className={'logo'}/></LogoContainer>
           <NavLink to={'/shop'}>SHOP</NavLink>
 
           {currentUser ?
             (<NavLink as={'span'} onClick={signOutUser}>
-                SIGN OUT
+              SIGN OUT
             </NavLink>)
             : (<NavLink to={'/auth'}>
                 SIGN IN
@@ -47,7 +47,7 @@ const Navigation = () => {
       </NavigationContainer>
       <Outlet/>
     </Fragment>
-  )
+)
 }
 
 export default Navigation;
